@@ -35,12 +35,12 @@ describe('Testing PMS', function () {
     await page.close();
     });
 
-    it.only('The "PMS - Willkommen" page should load', async () => {
+  it('The "PMS - Willkommen" page should load', async () => {
     
-      await page.home.logIn()
-      await page.base.openHelpMenu()
-      let onlineManualBtn = await page.base.onlineManualButton.isDisplayed()
-      expect(onlineManualBtn).to.be.true;
+    await page.home.logIn()
+    await page.base.openHelpMenu()
+    let onlineManualBtn = await page.base.onlineManualButton.isDisplayed()
+    expect(onlineManualBtn).to.be.true;
     });
 
   it('The "PMS - Willkommen" page should load', async () => {
