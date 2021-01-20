@@ -155,12 +155,12 @@ export class HomePage extends Page{
         }
 
         public async logIn() {
-          await this.logInAs('zBatch, Admin', '')
+          await this.logInAs('Georgi, Admin', '1234')
           await this.browser.wait(pageHasLoaded(Base));
 
         }
         public async logInWithCorrectDatа() {
-          await this.logInAs('zBatch, Admin', '')
+          await this.logInAs('Georgi, Admin', '1234')
           await this.browser.driver.sleep(200);
         }
       
