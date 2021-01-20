@@ -12,8 +12,8 @@ export class Browser {
   //public static instance: Browser;
 
 
-    public constructor(private browserName: string) {
-      this.driver = new Builder().forBrowser(browserName).build();
+  public constructor(private browserName: string) {
+    this.driver = new Builder().forBrowser(browserName).build();
   }
 
   public async navigate(url: string): Promise<void> {
@@ -43,24 +43,23 @@ export class Browser {
 
   public findElementByCss(selector: string): WebElementPromise {
     return this.driver.findElement(By.css(selector));
-}
+  }
 
-public findElementByXpath(selector: string): WebElementPromise {
+  public findElementByXpath(selector: string): WebElementPromise {
     return this.driver.findElement(By.xpath(selector));
-}
+  }
 
-public findElementById(selector: string): WebElementPromise {
-  return this.driver.findElement(By.id(selector));
-}
+  public findElementById(selector: string): WebElementPromise {
+    return this.driver.findElement(By.id(selector));
+  }
 
-public findElementByClassName(selector: string): WebElementPromise {
-  return this.driver.findElement(By.className(selector));
-  
-}
+  public findElementByClassName(selector: string): WebElementPromise {
+    return this.driver.findElement(By.className(selector)); 
+  }
 
-public async getTitle() {
-  return await this.driver.getTitle()
-}
+  public async getTitle() {
+    return await this.driver.getTitle()
+  }
 
   public async close(): Promise<void> {
     return await this.driver.quit();
@@ -78,7 +77,7 @@ public async getTitle() {
       console.log(`Save Screenshot as: ${filename}`)
       filesystem.writeFileSync(filename, data, 'base64');
     });
-   };
+ };
 };
 
 
