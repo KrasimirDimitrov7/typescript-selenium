@@ -40,7 +40,4 @@ export class WebComponent {
     public async getCssValue(text: string) {
         return await this.element.getCssValue(text);
     }
-
-    
-
 }
